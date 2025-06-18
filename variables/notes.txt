@@ -1,0 +1,11 @@
+; statement terminator
+
+main function is like start from which code executes
+
+#include<iostream> //pre processor directive 
+
+on compile extra file are created---> .exe(in windows) .out(in mac)
+
+\n and endl does same but \n is comparatively faster
+
+Variables:- Containers to store data

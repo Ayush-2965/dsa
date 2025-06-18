@@ -1,0 +1,49 @@
+🧠 Approach: Backtracking
+
+1. Start placing queens row-wise.
+2. For each cell in a row:
+   - Check if placing queen at (row, col) is safe.
+   - If safe, place it and move to next row.
+   - After exploring, remove queen (backtrack) and try next column.
+
+---
+
+🧩 isSafe(row, col):
+
+- Check:
+  ✅ No queen in same column (above rows only)
+  ✅ No queen in upper-left diagonal
+  ✅ No queen in upper-right diagonal
+
+- Only check **above rows** because we're placing row by row downward.
+
+---
+
+🧾 Board Representation:
+
+int board[N][N];   // 2D array
+1 = Queen placed
+0 = Empty cell
+
+---
+
+🔁 nQueens(row):
+
+- Base Case:
+  If row == N → all queens placed → print board
+
+- Loop through all columns in current row:
+  - If isSafe(row, col):
+      - Place queen
+      - Recursively call for next row
+      - Backtrack (remove queen)
+
+---
+
+🖨️ printBoard():
+
+- For each cell:
+  - If 1 → print "Q"
+  - Else → print "."
+
+---
