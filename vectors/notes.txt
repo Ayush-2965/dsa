@@ -1,0 +1,25 @@
+Vector os a array like structure but like array it don't have fixed length,its an array
+with dynamic length
+
+syntax ---- > vector<datatype> variableName
+
+Ex- vector<int> vec;
+
+
+vector functions ----
+
+size()      //returns size of the array
+
+push_back() // (add or push element at the end of the array)
+pop_back()  // (delete or pop element from the end of the array)
+
+front()     // (return first element)
+back()      //(return last element)
+
+at()       // same a vec[i] (getting element at any particular index)
+
+-----
+
+looping through vector we use 'for each'  // it loops and take value at every index not the index like normal for loop
+
+--syntax---> for ( type val : vec){}
