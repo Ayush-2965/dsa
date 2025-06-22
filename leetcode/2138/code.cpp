@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <string.h>
+#include<iostream>
 
 using namespace std;
 
@@ -20,3 +21,15 @@ public:
         return result;
     }
 };
+
+
+int main() {
+    Solution sol;
+    vector<string> parts = sol.divideString("abcdefghij", 3, 'x');
+
+    for (const string& part : parts) {
+        cout << part << endl;
+    }
+
+    return 0;
+}
