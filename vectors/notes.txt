@@ -6,7 +6,7 @@ syntax ---- > vector<datatype> variableName
 Ex- vector<int> vec;
 
 
-vector functions ----
+vector functions ---->
 
 size()      //returns size of the array
 
@@ -23,3 +23,38 @@ at()       // same a vec[i] (getting element at any particular index)
 looping through vector we use 'for each'  // it loops and take value at every index not the index like normal for loop
 
 --syntax---> for ( type val : vec){}
+
+
+
+----------------------------------------------
+
+🧱 Static Allocation
+Memory is allocated at compile time.
+
+Size must be known beforehand.
+
+Automatically deallocated when out of scope.
+
+-----------------------------------------------
+
+⚙️ Dynamic Allocation
+Memory is allocated at runtime using new.
+
+Size can be decided during execution.
+
+Must be manually deallocated using delete.
+
+---------------------------------------------
+
+***vectors made dynamic allocation more efficient
+
+
+---- Vectors vs Arrays ------>>
+
+Feature                  | Static Array (int arr[10]) | Dynamic Array (new int[n])  | Vector (std::vector<int>)
+-------------------------|----------------------------|-----------------------------|-----------------------------
+Size fixed?              | Yes                        | No (decided at runtime)     | No (can grow/shrink)
+Bounds checking          | No                         | No                          | Yes (at .at())
+Memory deallocation      | Automatic                  | Manual (delete[])           | Automatic (RAII)
+Built-in resizing        | ❌                        | ❌                          | ✅ .resize(), .push_back()
+STL integration          | ❌                        | ❌                          | ✅ (part of C++ STL)
