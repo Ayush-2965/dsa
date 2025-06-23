@@ -1,0 +1,33 @@
+
+Instead of checking 1, 2, 3... sabhi numbers,
+hum base-10 palindromes ko generate karenge — aur unka base-k with palindrome check karenge.
+
+length of base10 digit ---> len variable
+
+start and end are used to generate number for length `len` for using in root
+
+then in for loop ----> 
+
+                for len=3 all palindrome number --> start=10 , end=99 
+
+```
+                string left = to_string(root);      //left half of digit as string same as root
+                string right = left;                //right half take copy of left half --- if left "12"--> right"12"
+                                                    if left "13"--> right"13"
+
+                if (len % 2) right.pop_back();       //if odd pop the last digit from right depending on base10 number length
+                                                    ---for right "12"-->"1"
+
+                reverse(right.begin(), right.end()); //reverse right "1"--->"1"
+
+                string full = left + right;         //full digit string as palindrome "12"+"1"-->"121"
+                long long num = stoll(full);        //conversion string to number format (final base10 num in palindrome)
+
+
+                string baseK = toBaseK(num, k);     // conversion from base10 to baseK
+                if (isPalindrome(baseK)) {          //check palindrome only for baseK num 
+                    sum += num;                     //add to sum
+                    count++;                        //increase the required num count
+                }
+
+```
