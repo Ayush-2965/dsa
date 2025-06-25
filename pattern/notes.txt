@@ -1,0 +1,4 @@
+outer loop --> n lines----> n times
+
+inner loop ---> for each line no. of iteration----> start line
+
